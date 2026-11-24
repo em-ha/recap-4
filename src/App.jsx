@@ -5,8 +5,8 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h1>Theme Creator</h1>
-      // display colors here
+      <h2>Text</h2>
+      <Color color={initialColors[0]}/>
     </>
   );
 }
