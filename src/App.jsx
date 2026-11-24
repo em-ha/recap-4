@@ -5,8 +5,10 @@ import "./App.css";
 function App() {
   return (
     <>
-      <h2>Text</h2>
-      <Color color={initialColors[0]}/>
+      <h2>Theme Creator</h2>
+      {initialColors.map((color) => (
+        <Color key={color.id} color={color} />
+      ))}
     </>
   );
 }
