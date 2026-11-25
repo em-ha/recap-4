@@ -13,12 +13,16 @@ function App() {
     console.log(colorWithId);
   setColors(updateColors);
   }
+  function handleDeleteColor(id) {
+    const updatedColors = colors.filter((color) => color.id !== id);
+    setColors(updatedColors);
+  }
   return (
     <>
       <h2>Theme Creator</h2>
       <ColorForm onSubmitColor={handleAddColor} />
       {colors.map((color) => (
-        <Color key={color.id} color={color} />
+        <Color key={color.id} color={color} onDeleteColor={handleDeleteColor} />
       ))}
     </>
   );
