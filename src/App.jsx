@@ -24,6 +24,7 @@ function App() {
       {colors.map((color) => (
         <Color key={color.id} color={color} onDeleteColor={handleDeleteColor} />
       ))}
+      {colors.length === 0 && <p>Please add some new colors.</p>}
     </>
   );
 }
